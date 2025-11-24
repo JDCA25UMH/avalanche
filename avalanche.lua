@@ -31,30 +31,106 @@ presionado = false
 raw04 = {}
 raw04.__index = raw04
 
-function raw04.new(num,x,y)
+function raw04.new(num,x,y,aparece,
+ocurre,punto,miss)
 local instance = setmetatable({},
 raw04)
 instance.num = num 
 instance.x = x
 instance.y = y 
+instance.aparece = aparece
+instance.ocurre = ocurre
+instance.punto = punto
+instance.miss = miss 
  return instance
 end
 
-primero_rw04 = raw04.new(4,1,17)
-segundo_rw04 = raw04.new(4,6,17)
-tercero_rw04 = raw04.new(4,11,17)
-cuarto_rw04 = raw04.new(4,16,17)
-quinto_rw04 = raw04.new(4,21,17)
-seis_raw04 = raw04.new(4,26,17)
-siete_raw04 = raw04.new(4,31,17)
-ocho_raw04 = raw04.new(4,36,17)
-nueve_raw04 = raw04.new(4,41,17)
-diez_raw04 = raw04.new(4,46,17)
-once_raw04 = raw04.new(4,51,17)
-doce_raw04 = raw04.new(4,56,17)
+primero_rw04 = raw04.new(4,1,17,
+true,false,false,false)
+segundo_rw04 = raw04.new(4,6,17, true,
+false,false,false)
+tercero_rw04 = raw04.new(4,11,17,
+true,false,false,false)
+cuarto_rw04 = raw04.new(4,16,17, true,
+false,false,false)
+quinto_rw04 = raw04.new(4,21,17, true,
+false,false,false)
+seis_raw04 = raw04.new(4,26,17, true,
+false,false,false)
+siete_raw04 = raw04.new(4,31,17, true,
+false,false,false)
+ocho_raw04 = raw04.new(4,36,17, true,
+false,false,false)
+nueve_raw04 = raw04.new(4,41,17,true,
+false,false, false)
+diez_raw04 = raw04.new(4,46,17, true,
+false,false,false)
+once_raw04 = raw04.new(4,51,17, true,
+false, false, false)
+doce_raw04 = raw04.new(4,56,17, true,
+false, false, false)
+
+
+local raw03 = {}
+
+setmetatable(raw03,raw04)
+
+primero_raw03 = raw03.new(3,1,12,true,
+false,false,false)
+segundo_raw03 = raw03.new(3,6,12,true,
+false,false,false)
+tercero_raw03 = raw03.new(3,11,12, true,
+false,false,false)
+cuarto_raw03 = raw03.new(3,16,12,true,
+false,false,false)
+quinto_raw03 = raw03.new(3,21,12,true,
+false, false,false)
+seis_raw03 = raw03.new(3,26,12,true,
+false,false,false)
+siete_raw03 = raw03.new(3,31,12,true,
+false,false,false)
+ocho_raw03 = raw03.new(3,36,12,true,
+false,false,false)
+nueve_raw03= raw03.new(3,41,12,true,
+false,false,false)
+diez_raw03 = raw03.new(3,46,12,true,
+false,false,false)
+once_raw03= raw03.new(3,51,12,true,
+false,false,false)
+doce_raw03 = raw03.new(3,56,12,true,
+false,false,false)
 
 local temporizador = 0 
 ultimo_tiempo = os.time()
+
+raw02 = {}
+
+setmetatable(raw02, raw04)
+
+one_raw02 = raw02.new(2,1,7, true,
+false,false,false)
+two_raw02 = raw02.new(2,6,7, true,
+false,false,false)
+three_raw02 = raw02.new(2,11,7,true,
+false,false,false)
+four_raw02 = raw02.new(2,16,7,true,
+false,false,false)
+five_raw02 = raw02.new(2,21,7,true,
+false,false,false)
+six_raw02 = raw02.new(2,26,7,true,
+false,false,false)
+seven_raw02 = raw02.new(2,31,7,true,
+false,false,false)
+eight_raw02 = raw02.new(2,36,7,true,
+false,false,false)
+nine_raw02 = raw02.new(2,41,7,true,
+false,false,false)
+ten_raw02 = raw02.new(2,46,7,true,
+false,false,false)
+eleven_raw02 = raw02.new(2,51,7,true,
+false,false,false)
+twelve_raw02 = raw02.new(2,56,7,true,
+false,false,false)
 
 function _update()
  mx,my = getMPos()
@@ -114,163 +190,384 @@ cam()
 
 cam()
 cam("scale",3,2)
-Sprite(2,1,7)
-Sprite(2,6,7)
-Sprite(2,11,7)
-Sprite(2,16,7)
-Sprite(2,21,7)
-Sprite(2,26,7)
-Sprite(2,31,7)
-Sprite(2,36,7)
-Sprite(2,41,7)
-Sprite(2,46,7)
-Sprite(2,51,7)
-Sprite(2,56,7)
 
-Sprite(3,1,12)
-Sprite(3,6,12)
-Sprite(3,11,12)
-Sprite(3,16,12)
-Sprite(3,21,12)
-Sprite(3,26,12)
-Sprite(3,31,12)
-Sprite(3,36,12)
-Sprite(3,41,12)
-Sprite(3,46,12)
-Sprite(3,51,12)
-Sprite(3,56,12)
+if one_raw02.aparece then 
+Sprite(one_raw02.num,
+one_raw02.x,one_raw02.y)
+end
+if two_raw02.aparece then 
+Sprite(two_raw02.num,
+two_raw02.x,two_raw02.y)
+end
+if three_raw02.aparece then 
+Sprite(three_raw02.num,
+three_raw02.x,three_raw02.y)
+end
+if four_raw02.aparece then 
+Sprite(four_raw02.num,
+four_raw02.x,four_raw02.y)
+end
 
-local p= 0
+if five_raw02.aparece then 
+Sprite(five_raw02.num,
+five_raw02.x,five_raw02.y)
+end
+if six_raw02.aparece then 
+Sprite(six_raw02.num,
+six_raw02.x,six_raw02.y)
+end
+if seven_raw02.aparece  then
+Sprite(seven_raw02.num,
+seven_raw02.x,seven_raw02.y)
+end
+if eight_raw02.aparece then 
+Sprite(eight_raw02.num,
+eight_raw02.x,eight_raw02.y)
+end
+if nine_raw02.aparece then
+Sprite(nine_raw02.num,
+nine_raw02.x,nine_raw02.y)
+end
+if ten_raw02.aparece then
+Sprite(ten_raw02.num,
+ten_raw02.x,ten_raw02.y)
+end
+if eleven_raw02.aparece then
+Sprite(eleven_raw02.num,
+eleven_raw02.x,eleven_raw02.y)
+end
+if twelve_raw02.aparece then 
+Sprite(twelve_raw02.num,
+twelve_raw02.x,twelve_raw02.y)
+end
+
+if primero_raw03.aparece then
+ Sprite(primero_raw03.num,
+ primero_raw03.x,primero_raw03.y)
+end
+
+if segundo_raw03.aparece then  
+ Sprite(segundo_raw03.num,
+ segundo_raw03.x, segundo_raw03.y)
+end
+if tercero_raw03.aparece then 
+ Sprite(tercero_raw03.num,
+ tercero_raw03.x,tercero_raw03.y)
+end
+if cuarto_raw03.aparece then 
+ Sprite(cuarto_raw03.num,
+ cuarto_raw03.x,cuarto_raw03.y)
+end
+if quinto_raw03.aparece then
+ Sprite(quinto_raw03.num,
+ quinto_raw03.x,quinto_raw03.y)
+end
+if seis_raw03.aparece then
+ Sprite(seis_raw03.num,seis_raw03.x,
+ seis_raw03.y)
+end
+if siete_raw03.aparece then 
+Sprite(siete_raw03.num,
+siete_raw03.x,siete_raw03.y)
+end
+
+if ocho_raw03.aparece then 
+Sprite(ocho_raw03.num,
+ocho_raw03.x,ocho_raw03.y)
+end
+if nueve_raw03.aparece then 
+Sprite(nueve_raw03.num,
+nueve_raw03.x,nueve_raw03.y)
+end
+
+if diez_raw03.aparece then 
+Sprite(diez_raw03.num,
+diez_raw03.x,diez_raw03.y)
+end
+if once_raw03.aparece then 
+Sprite(once_raw03.num,
+once_raw03.x,once_raw03.y)
+end
+if doce_raw03.aparece then 
+Sprite(doce_raw03.num,
+doce_raw03.x,doce_raw03.y)
+end
 local m = 0 
+local p = 0 
 
-aparece = true
-if temporizador >=2 and
- primero_rw04.y< 33 then
-primero_rw04.y = primero_rw04.y +1
+
+
+function raw04:down()
+if self.y<33 then
+ self.y = self.y+1
 end
 
-if primero_rw04.y == 33
-and primero.x ==0  then
-primero_rw04.y= primero_rw04.y +1 
-aparece = false
-ocurre = true
-
-punto = true
+if primero.x == self.x-1 then
+self.punto = true
 end
+if self.y == 33 and self.punto then
 
-if primero_rw04.y == 33 and
-not (primero.x == 0 )then
-primero_rw04.y = primero_rw04.y +1
+self.y = self.y +1
+self.aparece = false
+self.ocurre = true
 
 end
 
-if primero_rw04.y> 33 and
-punto then
- primero_rw04.y = primero_rw04.y +1
- aparece = false
+if self.y == 33 and
+ not self.punto then
+ self.y = self.y +1
+ self.miss = true
+end 
+
+if self.y> 33  and
+ self.punto then
+ self.y = self.y +1
+ self.aparece = false
 end
 
-if primero_rw04.y>33 and not punto
-then
-primero_rw04.y = primero_rw04.y +1
-aparece = true
+if self.y>33 and not self.punto then
+self.y = self.y +1
+self.aparece = true
 end
 
-if primero_rw04.y>= 127 and not punto
-then
-miss = true
-primero_rw04.y = 127
+if self.y>= 127 then
+
+self.y = 127
 end
-if ocurre then 
+if self.ocurre then
 p = p +1
 end
-
-if miss then
-m = m+1
+if self.miss then
+m= m +1
+end
 end
 
-local aparece02 = true
-if temporizador>= 4 and
-quinto_rw04.y < 33 then
- quinto_rw04.y = quinto_rw04.y +1
-end
+ if temporizador>=2 then
+  primero_rw04:down()
+  palabra = "cinco"
+  end
+ 
+ if temporizador>=4 then
+  quinto_rw04:down()
+  palabra= "nueve"
+ end
+ 
+ if temporizador>=6 then
+  nueve_raw04:down()
+  palabra= "tercero"
+ end
 
-if quinto_rw04.y == 33 and
-primero.x == 20 then
-quinto_rw04.y = quinto_rw04.y +1
-aparece02 = false
-ocurre02 = true
-punto02 = true
-end
+ if temporizador>=8 then
+  tercero_rw04:down()
+  palabra = "diez"
+ end
+ 
+ if temporizador>=10 then
+  diez_raw04:down()
+  palabra = "dos"
+ end
+ 
+ if temporizador>= 12 then
+  segundo_rw04:down()
+  palabra= "seis"
+   end
 
-if quinto_rw04.y == 33 and
-not (primero.x == 20)then
-quinto_rw04.y = quinto_rw04.y+1
+ if temporizador>= 14 then
+  seis_raw04:down()
+  palabra = "cuarto"
+ end
 
-end
-if quinto_rw04.y > 33 and punto02 then
-quinto_rw04.y = quinto_rw04.y +1
-aparece02 = false
-
-end
-
-if quinto_rw04.y> 33 and not punto02 then
-quinto_rw04.y = quinto_rw04.y +1
-aparece = true
-end
-
-if quinto_rw04.y>= 127 and not punto02
-then
-miss02 = true
-quinto_rw04.y = 127
-end
-if ocurre02 then
-p = p +1 
-end
-if miss02 then
-m = m +1 
-end
-if aparece then 
+ if temporizador>= 16 then
+  cuarto_rw04:down()
+  palabra = "siete"
+ end
+ 
+ if temporizador>=18 then
+  siete_raw04:down()
+  palabra = "ocho"
+ end
+ 
+ if temporizador>= 20 then
+ ocho_raw04:down()
+ palabra = "once"
+ end
+ if temporizador>= 22 then
+ once_raw04:down()
+ palabra= "doce"
+ end
+ 
+ if temporizador>= 24 then
+  doce_raw04:down()
+  palabra= "uno 2"
+ end
+  if temporizador>=26 then
+  primero_raw03:down()
+  palabra= "seis 2"
+  end
+  if temporizador>=28 then
+  seis_raw03:down()
+  palabra = "once 2"
+  end
+  if temporizador>=30 then
+   once_raw03:down()
+   palabra= "dos 2"
+  end
+  if temporizador>=32 then 
+   segundo_raw03:down()
+   palabra= "diez 2"
+  end
+  
+  if temporizador>= 34 then
+   diez_raw03:down()
+   palabra = "tres 2"
+   end
+   
+   if temporizador>= 36 then 
+    tercero_raw03:down()
+    palabra= "quinto 2"
+   end
+   
+   if temporizador>= 38 then
+   quinto_raw03:down()
+   palabra= "siete 2"
+   end
+   
+   if temporizador >= 40 then
+   siete_raw03:down()
+   palabra= "nueve 2"
+   end
+   
+   if temporizador>= 42 then
+   nueve_raw03:down()
+   palabra= "doce 2"
+   end
+   
+   if temporizador>= 44 then
+   doce_raw03:down()
+   palabra="cuarto 2"
+   end
+   
+   if temporizador >= 46 then
+   cuarto_raw03:down()
+   palabra = "ocho 2"
+   end
+   
+   if temporizador >= 48 then
+   ocho_raw03:down()
+   palabra = "seis 3"
+   end
+   
+   if temporizador>= 50 then
+   six_raw02:down()
+   palabra = "primero 3"
+   end
+   
+   if temporizador >= 52 then
+   one_raw02:down()
+   palabra = "ocho 3"
+   end
+   if temporizador >= 54 then
+   eight_raw02:down()
+   palabra= "dos 3"
+   end
+   
+   if temporizador >= 56 then
+   two_raw02:down()
+   palabra = "nueve 3"
+   end
+   
+   if temporizador >= 58 then
+   nine_raw02:down()
+   palabra = "tres 3"
+   end
+   if temporizador >= 60 then
+   three_raw02:down()
+   palabra= "cinco 3"
+   end
+   
+   if temporizador >= 62 then
+   five_raw02:down()
+   palabra= "once 3"
+   end
+   
+  if temporizador >= 64 then
+   eleven_raw02:down()
+   palabra = "siete 3"
+  end
+ if temporizador>= 66 then
+  seven_raw02:down()
+  palabra= "cuatro 3"
+ end
+ if temporizador >= 68 then
+  four_raw02:down()
+  palabra = "doce 3 "   
+ end
+ if temporizador>= 70 then
+ twelve_raw02:down()
+ palabra = "diez"
+ end
+ if temporizador >= 72 then
+ ten_raw02:down()
+ end
+ if  primero_rw04.aparece then
 Sprite(primero_rw04.num,
 primero_rw04.x,primero_rw04.y)
-end
 
- 
+   end
+   
+   if segundo_rw04.aparece then
 Sprite(segundo_rw04.num, 
 segundo_rw04.x,segundo_rw04.y)
-
+end
+if tercero_rw04.aparece then
 Sprite(tercero_rw04.num,
 tercero_rw04.x,tercero_rw04.y)
-
-Sprite(cuarto_rw04.num,
-cuarto_rw04.x,cuarto_rw04.y)
-
-if aparece02 then 
-Sprite(quinto_rw04.num,
-quinto_rw04.x,
-quinto_rw04.y)
 end
 
+if cuarto_rw04.aparece then
+Sprite(cuarto_rw04.num,
+cuarto_rw04.x,cuarto_rw04.y)
+end
+if quinto_rw04.aparece then 
+ Sprite(quinto_rw04.num,
+  quinto_rw04.x,
+  quinto_rw04.y)
+
+end
+
+if seis_raw04.aparece then
 Sprite(seis_raw04.num,
 seis_raw04.x,seis_raw04.y)
+end
 
+if siete_raw04.aparece then
 Sprite(siete_raw04.num,
 siete_raw04.x,siete_raw04.y)
+end
 
+if ocho_raw04.aparece then
 Sprite(ocho_raw04.num,
 ocho_raw04.x,ocho_raw04.y)
+end
+if nueve_raw04.aparece then 
+ Sprite(nueve_raw04.num,
+  nueve_raw04.x,nueve_raw04.y)
+end
 
-Sprite(nueve_raw04.num,
-nueve_raw04.x,nueve_raw04.y)
-
+if diez_raw04.aparece then
 Sprite(diez_raw04.num,
 diez_raw04.x,diez_raw04.y)
+end
 
+if once_raw04.aparece then
 Sprite(once_raw04.num,
 once_raw04.x,once_raw04.y)
+end
 
+if doce_raw04.aparece then
 Sprite(doce_raw04.num,
 doce_raw04.x,doce_raw04.y)
+end
 cam()
 
 
@@ -283,6 +580,7 @@ print("HIGH SCORE:",80,4)
 print(p,140,4)
 cam()
 
+print(palabra,150,4)
 
 end
 ___tilemap___
