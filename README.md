@@ -6,8 +6,8 @@ Juego con seis líneas verticales en la parte inferior de la pantalla,
 Tiene una línea vertical como sprite, y 3 tipos de bloque de distintos colores, 
 ordenados por filas.
  
-<img width="570" height="385" align="center" alt="Captura de pantalla 2026-11-11 094525" src="https://github.com/user-attachments/assets/877f0caa-bb2d-41cd-b853-84e1da2435c7" />
-<br>
+<img width="570" height="385" align="center" alt="Captura de pantalla 2026-11-11 094525" src="https://github.com/user-attachments/assets/877f0caa-bb2d-41cd-b853-84e1da2435c7" /><br>
+
 
 El jugador debe mover las líneas verticales por medio de botones izquierda o derecha, para que el paddle,
 atrape el correspondiente bloque que, desciende, indicado en la sección de palabra, para poder 
