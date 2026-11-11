@@ -1,10 +1,10 @@
 <h1>Avalanche</h1>
 
-<p align="justify">Juego con seis líneas verticales en la parte inferior de la pantalla, 
- que se desplazan
-horizontalmente, para atrapar unos bloques que descienden hasta un limite horizontal.
+Juego con seis líneas verticales en la parte inferior de la pantalla, 
+ que se desplazanhorizontalmente, para atrapar unos bloques que descienden
+ hasta un limite horizontal.
 Tiene una línea vertical como sprite, y 3 tipos de bloque de distintos colores, 
-ordenados por filas.</p>
+ordenados por filas.
  
 <img width="570" height="385" align="center" alt="Captura de pantalla 2026-11-11 094525" src="https://github.com/user-attachments/assets/877f0caa-bb2d-41cd-b853-84e1da2435c7" />
 
