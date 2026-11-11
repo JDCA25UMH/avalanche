@@ -10,4 +10,9 @@ ordenados por filas.
 Se obtiene puntaje favorable al atrapar los bloques con las líneas verticales, y si llegan al limite horizontalse califica como perdida. 
 
 Los bloques descienden acorde a un tiempo determinado, en el que se le indica al programa,
-el hecho de que puede realizar una acción. 
+el hecho de que puede realizar una acción, esto dentro de una tabla local de acciones, 
+dentro de la cual se establece tiempo, acción y palabras.
+
+El jugador debe mover las líneas verticales por medio de botones izquierda o derecha, para que el paddle,
+atrape el correspondiente bloque que, desciende, indicado en la sección de palabra, para poder 
+obtener un punto positivo.
